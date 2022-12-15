@@ -1,0 +1,22 @@
+[package]
+name = "rs_versions"
+version = "0.2.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+versions = "3.0.3"
+regex = "1.5.5"
+lazy_static = "1.4.0"
+
+[lib]
+name = "rs_versions"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.14.4"
+features = ["extension-module"]
+
+[profile.release]
+lto = "thin"
